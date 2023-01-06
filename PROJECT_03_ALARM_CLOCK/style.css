@@ -1,0 +1,31 @@
+body{
+    font-family: Arial;
+}
+.wrapper{
+    background-color: #ffd335b6;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+.content{
+    width: 600px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.content select {
+    outline: none;
+    height: 65px;
+    width: 75%;
+    padding: 10px ;
+    border-radius: 5px;
+    border: 1px solid #D161C2;
+}
+.content button{
+    background-color: #D161C2;
+    color: white;
+}
