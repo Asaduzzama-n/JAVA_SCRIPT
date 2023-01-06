@@ -30,6 +30,8 @@ for(let i = 2; i>0; i--){
     selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
+let alarmTime, isAlarmSet;
+let ringTone = new Audio("../Resources/audio/ringtone.mp3");
 
 setInterval (()=>{
     // console.log('hello')
@@ -48,5 +50,34 @@ setInterval (()=>{
     s = s < 10 ? "0" + s : s;
 
     currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
+    console.log(alarmTime);
+    if (alarmTime === `${h}:${m} ${ampm}`) {
+        ringTone.play();
+        ringTone.loop = true;
+    }
 
 },1000);
+
+
+function setAlarm(){
+
+    if (isAlarmSet) {
+        alarmTime = "";
+        ringTone.pause();
+        // content.classList.remove("disable");
+        alarmButton.innerText = "Set Alarm";
+        return isAlarmSet = false;
+    }
+
+    let time = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
+    if(time.includes("Hour") || time.includes("Minute")|| time.includes("AM/PM") ){
+        alert("PLEASE SELECT PROPER TIME");
+    }
+    alarmTime = time;
+    isAlarmSet = true;
+    alarmButton.innerText = "Clear Alarm"
+}
+
+alarmButton.addEventListener('click',()=>{
+    setAlarm();
+})
