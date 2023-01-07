@@ -1,0 +1,59 @@
+body{
+    background-color: rgba(0, 0, 255, 0.649)!important;
+
+}
+.wrapper{
+    height: 100vh;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.quote-container{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.quote-content{
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+.quote-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.quote-footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.quote-footer ul li {
+    border: 1px solid rgba(0, 0, 255, 0.649);
+    padding: 15px 0px;
+    margin-right: 10px ;
+    margin-top: 20px;
+    border-radius: 60%;
+    
+}
+.quote-footer ul li:hover {
+    background-color: rgba(0, 0, 255, 0.649);
+    color: aliceblue;
+    border: none;
+    
+}
+.quote-footer button{
+    height: 40px;
+    width: auto;
+    background-color: rgba(0, 0, 255, 0.649);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    padding: 0px 20px;
+}
